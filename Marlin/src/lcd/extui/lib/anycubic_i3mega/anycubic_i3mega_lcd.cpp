@@ -721,7 +721,7 @@ void AnycubicTFTClass::GetCommandFromTFT() {
           case 17: { // A17 set heated bed temp
             unsigned int tempbed;
             if (CodeSeen('S')) {
-              tempbed = constrain(CodeValue(), 0, 100);
+              tempbed = constrain(CodeValue(), 0, 130);
               ExtUI::setTargetTemp_celsius(tempbed, (ExtUI::heater_t)ExtUI::BED);
             }
           }
